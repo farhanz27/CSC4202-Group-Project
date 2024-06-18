@@ -10,9 +10,6 @@
 - [Program Testing](#program-testing)
 - [Results and Analysis](#results-and-analysis)
 - [Conclusion](#conclusion)
-- [Contributing](#contributing)
-- [License](#license)
-- [Acknowledgements](#acknowledgements)
 
 ## Introduction
 This project aims to optimize the allocation of rescue teams in an urban area affected by an earthquake. The goal is to minimize response time and maximize the number of lives saved using a Greedy Algorithm.
