@@ -1,40 +1,63 @@
-# Autonomous Aerial Drones in Disaster Management
+# Earthquake Response Optimization System
+
+## Table of Contents
+- [Introduction](#introduction)
+- [Problem Definition](#problem-definition)
+- [Development of the Model](#development-of-the-model)
+- [Algorithm Specification](#algorithm-specification)
+- [Designing the Algorithm](#designing-the-algorithm)
+- [Implementation](#implementation)
+- [Program Testing](#program-testing)
+- [Results and Analysis](#results-and-analysis)
+- [Conclusion](#conclusion)
+- [Contributing](#contributing)
+- [License](#license)
+- [Acknowledgements](#acknowledgements)
+
+## Introduction
+This project aims to optimize the allocation of rescue teams in an urban area affected by an earthquake. The goal is to minimize response time and maximize the number of lives saved using a Greedy Algorithm.
 
 ## Problem Definition
-- **Scenario**: Earthquake in City X
-- **Impact**: Structural damage, casualties, and infrastructure collapse
-- **Goal**: Efficiently deploy AAD for search and rescue, damage assessment
-- **Expected Output**: Detailed maps, real-time updates, and optimized resource allocation
+**Scenario:** An earthquake has caused severe damage to buildings and roads in a densely populated urban area.
 
-## Model Development
-- **Data Type**: Geographical, meteorological, structural damage data
-- **Objective Function**: Minimize response time, maximize coverage
-- **Constraints**: Battery life, signal range, environmental obstacles
+**Geographical Setting:** Densely populated urban area.
+
+**Type of Disaster:** Earthquake.
+
+**Damage Impact:** Severe damage to buildings and infrastructure, loss of life, and injuries.
+
+**Importance of AAD:** Adaptive Automated Decision-making (AAD) can optimize the allocation of rescue teams and resources, improving efficiency and effectiveness.
+
+**Goal:** Develop a model for optimal allocation of rescue teams to various affected locations to minimize response time and maximize the number of lives saved.
+
+**Expected Output:** An optimized rescue operation plan, indicating which rescue teams should be deployed to which locations.
+
+## Development of the Model
+**Data Type:**
+- Real-time data on affected locations.
+- Availability and location of rescue teams.
+- Road conditions and traffic data.
+
+**Objective Function:** Minimize the total response time and maximize the number of lives saved.
+
+**Constraints:** Limited number of rescue teams, road conditions, traffic constraints, and the severity of damage at each location.
 
 ## Algorithm Specification
-- **Selected Algorithm**: A* Search Algorithm
-- **Comparison**: Compared with Dijkstra’s and BFS
-- **Suitability**: Efficient for pathfinding in dynamic environments
+**Algorithm Selected:** Greedy Algorithm for immediate rescue operations.
 
-## Algorithm Design
-- **Pseudocode**: Provided in the documentation
-- **Flowchart**: [See flowchart](docs/flowchart.png)
+**Comparison of Options:**
+- **Dynamic Programming (DP):** Provides an optimal solution but is computationally intensive.
+- **Divide and Conquer:** Efficient for breaking down problems but may not handle interconnected subproblems well.
+- **Greedy Algorithm:** Fast decision-making, suitable for real-time applications.
 
-## Checking Correctness
-- **Asymptotic Analysis**: Detailed in the documentation
-- **Recurrence**: Verified through mathematical induction
+**Suitability:** The Greedy Algorithm is suitable for quick decision-making in real-time scenarios, essential for earthquake response.
 
-## Analysis
-- **Growth of Function**: Worst-case O(n log n), Best-case O(n), Average-case O(n log n)
-
-## Implementation
-- **Source Code**: Available in `/src` directory
-- **Key Sections**: Explained with comments
-
-## Program Testing
-- **Demo**: [Watch Demo](https://linktodemo.com)
-- **Test Cases**: Included in `/tests` directory
-
-## Documentation
-- **Online Portfolio**: [View Documentation](https://linktoportfolio.com)
-
+## Designing the Algorithm
+**Pseudocode:**
+```java
+1. Initialize a priority queue for rescue locations based on severity.
+2. While there are rescue teams available:
+   a. Dequeue the highest priority location.
+   b. Assign the nearest available rescue team to this location.
+   c. Update the status of the rescue team and the location.
+3. Return the allocation plan.
