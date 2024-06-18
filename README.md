@@ -1,4 +1,3 @@
-# CSC4202-Group-Project
 # Autonomous Aerial Drones in Disaster Management
 
 ## Problem Definition
