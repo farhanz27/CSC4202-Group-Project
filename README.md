@@ -1,4 +1,4 @@
-# Earthquake Response Optimization Problem
+# Strategic Relief Supply Allocation in Disaster Areas
 
 ## Team Members
 MUHAMMAD ZIKRI BIN ZAKARIA - 213118 \
